@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import classNames from 'classnames';
 
@@ -13,4 +14,8 @@ const Button = ({onClick, className, outline, children}) => {
     );
 };
 
-export default Button
+Button.propTypes = {
+    onClick: PropTypes.func,
+};
+
+export default Button;

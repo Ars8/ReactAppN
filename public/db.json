@@ -1,0 +1,164 @@
+{
+  "nails": [
+    {
+      "id": 0,
+      "imageUrl": "https://www.krasotkapro.ru/images/440x440/1555961.jpg",
+      "name": "UNO, Strong",
+      "types": [0, 1],
+      "sizes": [12],
+      "price": 680,
+      "category": 0,
+      "rating": 4
+    },
+    {
+      "id": 1,
+      "imageUrl": "https://www.krasotkapro.ru/images/440x440/1342614.jpg",
+      "name": "Kodi, Rubber Base",
+      "types": [0],
+      "sizes": [7, 12, 14],
+      "price": 630,
+      "category": 0,
+      "rating": 6
+    },
+    {
+      "id": 2,
+      "imageUrl": "https://www.krasotkapro.ru/images/440x440/1555961.jpg",
+      "name": "UNO, Strong",
+      "types": [0],
+      "sizes": [12],
+      "price": 705,
+      "category": 1,
+      "rating": 4
+    },
+    {
+      "id": 3,
+      "imageUrl": "https://www.krasotkapro.ru/images/440x440/1636301.jpg",
+      "name": "Beautix, Woozy",
+      "types": [1],
+      "sizes": [7, 12, 14],
+      "price": 275,
+      "category": 1,
+      "rating": 2
+    },
+    {
+      "id": 4,
+      "imageUrl": "https://www.krasotkapro.ru/images/440x440/1542206.jpg",
+      "name": "Klio Professional",
+      "types": [0, 1],
+      "sizes": [7, 12, 14],
+      "price": 815,
+      "category": 2,
+      "rating": 8
+    },
+    {
+      "id": 5,
+      "imageUrl": "https://www.krasotkapro.ru/images/440x440/1548708.jpg",
+      "name": "Vogue Nails, Топ",
+      "types": [0],
+      "sizes": [7, 14],
+      "price": 580,
+      "category": 2,
+      "rating": 2
+    },
+    {
+      "id": 6,
+      "imageUrl": "https://www.krasotkapro.ru/images/440x440/1003785.jpg",
+      "name": "TNL, База и Топ",
+      "types": [0, 1],
+      "sizes": [7, 12, 14],
+      "price": 675,
+      "category": 3,
+      "rating": 9
+    },
+    {
+      "id": 7,
+      "imageUrl": "https://www.krasotkapro.ru/images/440x440/1528936.jpg",
+      "name": "ADRICOCO, База и Топ",
+      "types": [0, 1],
+      "sizes": [7, 12, 14],
+      "price": 450,
+      "category": 3,
+      "rating": 28
+    },
+    {
+      "id": 8,
+      "imageUrl": "https://www.krasotkapro.ru/images/440x440/1537974.jpg",
+      "name": "Klio Professional, №36",
+      "types": [0, 1],
+      "sizes": [12],
+      "price": 395,
+      "category": 4,
+      "rating": 10
+    },
+    {
+      "id": 9,
+      "imageUrl": "https://www.krasotkapro.ru/images/440x440/1583202.jpg",
+      "name": "TNL, Гель-лак, Муссон",
+      "types": [0],
+      "sizes": [7, 12],
+      "price": 285,
+      "category": 4,
+      "rating": 19
+    },
+    {
+      "id": 10,
+      "imageUrl": "https://www.krasotkapro.ru/images/440x440/1157602.jpg",
+      "name": "El Corazon, № 423",
+      "types": [0, 1],
+      "sizes": [7, 12],
+      "price": 188,
+      "category": 5,
+      "rating": 20
+    },
+    {
+      "id": 11,
+      "imageUrl": "https://www.krasotkapro.ru/images/440x440/1361716.jpg",
+      "name": "El Corazon, Топ",
+      "types": [0, 1],
+      "sizes": [7, 12, 14],
+      "price": 204,
+      "category": 5,
+      "rating": 14
+    },
+    {
+      "id": 12,
+      "imageUrl": "https://www.krasotkapro.ru/images/440x440/1537956.jpg",
+      "name": "UNO LUX, База Rubber Base",
+      "types": [0, 1],
+      "sizes": [7, 12, 14],
+      "price": 721,
+      "category": 1,
+      "rating": 16
+    },
+    {
+      "id": 13,
+      "imageUrl": "https://www.krasotkapro.ru/images/440x440/1537330.jpg",
+      "name": "In'Garden",
+      "types": [1],
+      "sizes": [12, 14],
+      "price": 721,
+      "category": 1,
+      "rating": 11
+    },
+    {
+      "id": 14,
+      "imageUrl": "https://www.krasotkapro.ru/images/440x440/1541081.jpg",
+      "name": "ruNail, Топ INDI laque",
+      "types": [0, 1],
+      "sizes": [12, 14],
+      "price": 372,
+      "category": 2,
+      "rating": 15
+    },
+    {
+      "id": 15,
+      "imageUrl": "https://www.krasotkapro.ru/images/440x440/1541697.jpg",
+      "name": "NeoNail, Топ Hard",
+      "types": [0, 1],
+      "sizes": [7, 12, 14],
+      "price": 1205,
+      "category": 2,
+      "rating": 12
+    }
+  ]
+}
