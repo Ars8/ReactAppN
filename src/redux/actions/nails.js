@@ -1,8 +1,6 @@
 import axios from 'axios';
-import { useDispatch } from 'react-redux';
 
-export const fetchNails = () => {
-  const dispatch = useDispatch();
+export const fetchNails = () => (dispatch) => {
   axios.get('http://localhost:3001/nails').then(({ data }) => {
     dispatch(setNails(data));
   });

@@ -8,6 +8,7 @@ const nails = (state = inititialState, action) => {
     return {
       ...state,
       items: action.payload,
+      isLoaded: true,
     };
   }
   return state;
