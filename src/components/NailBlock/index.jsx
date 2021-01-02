@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
+import LoadingBlock from './LoadingBlock'
+
 function NailBlock({name, imageUrl, price, types, sizes}) {
   const avaiblesTypes = ['матовый', 'глянцевый'];
   const availableSizes = [7, 12, 14];
@@ -79,14 +81,14 @@ NailBlock.propTypes = {
 	imageUrl: PropTypes.string.isRequired,
 	price: PropTypes.number.isRequired,
 	types: PropTypes.arrayOf(PropTypes.number),
-	sizes: PropTypes.arrayOf(PropTypes.number),
+  sizes: PropTypes.arrayOf(PropTypes.number),
 };
 
 NailBlock.defaultProps = {
 	name: '...',
 	price: 0,	
 	types: [],
-	sizes: [],
+  sizes: [],
 };
 
 export default NailBlock
