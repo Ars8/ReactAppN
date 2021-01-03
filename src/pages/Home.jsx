@@ -3,14 +3,14 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import { Categories, SortPopup, NailBlock, NailLoadingBlock } from '../components';
 
-import {setCategory} from '../redux/actions/filters';
+import {setCategory, setSortBy} from '../redux/actions/filters';
 import { fetchNails } from '../redux/actions/nails';
 
 const categoryNames = ['Гель-лаки', 'Базы', 'Топы', 'Наборы', 'Кошачий глаз', 'Лаки'];
 const sortItems = [
-	{name: 'популярности', type: 'popular'}, 
-	{name: 'цене', type: 'price'}, 
-	{name: 'алфавиту', type: 'alphabet'}];
+	{name: 'популярности', type: 'popular', order: 'desc'}, 
+	{name: 'цене', type: 'price', order: 'desc'}, 
+	{name: 'алфавиту', type: 'name', order: 'asc'}];
 
 function Home() {
 	const dispatch = useDispatch();
@@ -19,11 +19,15 @@ function Home() {
 	const {category, sortBy} = useSelector(({ filters }) => filters);
 
 	React.useEffect(() => {
-		dispatch(fetchNails());
-	  }, [category]);
+		dispatch(fetchNails(sortBy, category));
+	  }, [category, sortBy]);
 
 	const onSelectCategory = React.useCallback((index) => {
 		dispatch(setCategory(index));
+	}, []);
+
+	const onSelectSortType = React.useCallback((type) => {
+		dispatch(setSortBy(type));
 	}, []);
 
     return (
@@ -31,10 +35,14 @@ function Home() {
 			<div className="content__top">
 				<Categories
 				activeCategory={category}
-				onClickItem={onSelectCategory}
+				onClickCategory={onSelectCategory}
 				items={categoryNames}
 				/>
-				<SortPopup items={sortItems} />
+				<SortPopup 
+					activeSortType={sortBy.type} 
+					items={sortItems} 
+					onClickSortType={onSelectSortType} 
+				/>
 			</div>
 			<h2 className="content__title">Все товары</h2>
 			<div className="content__items">
