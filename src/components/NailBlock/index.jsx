@@ -1,14 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import Button from '../Button';
 
-import LoadingBlock from './LoadingBlock'
-
-function NailBlock({name, imageUrl, price, types, sizes}) {
+function NailBlock({id, name, imageUrl, price, types, sizes, onClickAddNail, addedCount }) {
   const avaiblesTypes = ['матовый', 'глянцевый'];
   const availableSizes = [7, 12, 14];
   const [activeType, setActiveType] = React.useState(types[0]);
-  const [activeSize, setActiveSize] = React.useState(sizes[0]);
+  const [activeSize, setActiveSize] = React.useState(0);
 
   const onSelectType = (index) => {
     setActiveType(index);
@@ -17,6 +16,18 @@ function NailBlock({name, imageUrl, price, types, sizes}) {
   const onSelectSize = (index) => {
     setActiveSize(index);
   }
+
+  const onAddNail = () => {
+    const obj = {
+      id,
+      name,
+      imageUrl,
+      price,
+      size: availableSizes[activeSize],
+      type: availableTypes[activeType],
+    };
+    onClickAddPizza(obj);
+  };
 
     return (
         <div className="pizza-block">
@@ -56,7 +67,7 @@ function NailBlock({name, imageUrl, price, types, sizes}) {
               </div>
               <div className="pizza-block__bottom">
                 <div className="pizza-block__price">от {price} ₽</div>
-                <div className="button button--outline button--add">
+                <Button onClick={onAddNail} className="button--add" outline>
                   <svg
                     width="12"
                     height="12"
@@ -69,8 +80,8 @@ function NailBlock({name, imageUrl, price, types, sizes}) {
                     />
                   </svg>
                   <span>Добавить</span>
-                  <i>2</i>
-                </div>
+                  {addedCount && <i>{addedCount}</i>}
+                </Button>
             </div>
         </div>
     )    
@@ -82,10 +93,12 @@ NailBlock.propTypes = {
 	price: PropTypes.number.isRequired,
 	types: PropTypes.arrayOf(PropTypes.number),
   sizes: PropTypes.arrayOf(PropTypes.number),
+  onClickAddNail: PropTypes.func,
+  addedCount: PropTypes.number,
 };
 
 NailBlock.defaultProps = {
-	name: '...',
+	name: '---',
 	price: 0,	
 	types: [],
   sizes: [],

@@ -7,12 +7,15 @@ export const setLoaded = (payload) => ({
 
 export const fetchNails = (sortBy, category) => (dispatch) => {
   dispatch(setLoaded(false));
-  axios.get(`http://localhost:3001/nails?${
-    category !== null ? `category=${category}` : ''
-  }&_sort=${sortBy.type}&_order=${sortBy.order}`,
-  ).then(({ data }) => {
-    dispatch(setNails(data));
-  });
+  axios
+    .get(
+      `/nails?${category !== null ? `category=${category}` : ''}&_sort=${sortBy.type}&_order=${
+        sortBy.order
+      }`,
+    )
+    .then(({ data }) => {
+      dispatch(setNails(data));
+    });
 };
 
 export const setNails = (items) => ({

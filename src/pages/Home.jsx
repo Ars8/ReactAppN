@@ -15,6 +15,7 @@ const sortItems = [
 function Home() {
 	const dispatch = useDispatch();
 	const items = useSelector(({ nails }) => nails.items);
+	const cartItems = useSelector(({ cart }) => cart.items);
 	const isLoaded = useSelector(({ nails }) => nails.isLoaded);
 	const {category, sortBy} = useSelector(({ filters }) => filters);
 
@@ -29,6 +30,13 @@ function Home() {
 	const onSelectSortType = React.useCallback((type) => {
 		dispatch(setSortBy(type));
 	}, []);
+
+	const handleAddNailToCart = (obj) => {
+		dispatch({
+		  type: 'ADD_NAIL_CART',
+		  payload: obj,
+		});
+	  };
 
     return (
         <div className="container">
@@ -48,7 +56,14 @@ function Home() {
 			<div className="content__items">
 				{
 					isLoaded 
-					? items.map(obj => <NailBlock key={obj.id} {...obj} />) 
+					? items.map((obj) => (
+					<NailBlock 
+						onClickAddNail={handleAddNailToCart} 
+						key={obj.id}
+						addedCount={cartItems[obj.id] && cartItems[obj.id].items.length}
+						{...obj} 
+						/>
+					)) 
 					: Array(12)
 						.fill(0)
 						.map((_, index) => <NailLoadingBlock key={index}/>)
