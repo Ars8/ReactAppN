@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import Button from '../Button';
 
 function NailBlock({id, name, imageUrl, price, types, sizes, onClickAddNail, addedCount }) {
-  const avaiblesTypes = ['матовый', 'глянцевый'];
+  const availableTypes = ['матовый', 'глянцевый'];
   const availableSizes = [7, 12, 14];
   const [activeType, setActiveType] = React.useState(types[0]);
   const [activeSize, setActiveSize] = React.useState(0);
@@ -26,7 +26,7 @@ function NailBlock({id, name, imageUrl, price, types, sizes, onClickAddNail, add
       size: availableSizes[activeSize],
       type: availableTypes[activeType],
     };
-    onClickAddPizza(obj);
+    onClickAddNail(obj);
   };
 
     return (
@@ -39,7 +39,7 @@ function NailBlock({id, name, imageUrl, price, types, sizes, onClickAddNail, add
               <h4 className="pizza-block__title">{name}</h4>
               <div className="pizza-block__selector">
                 <ul>
-                  {avaiblesTypes.map((type, index) => (
+                  {availableTypes.map((type, index) => (
                     <li
                       key={type}
                       onClick={() => onSelectType(index)} 

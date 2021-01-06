@@ -6,7 +6,7 @@ import { Categories, SortPopup, NailBlock, NailLoadingBlock } from '../component
 import {setCategory, setSortBy} from '../redux/actions/filters';
 import { fetchNails } from '../redux/actions/nails';
 
-const categoryNames = ['Гель-лаки', 'Базы', 'Топы', 'Наборы', 'Кошачий глаз', 'Лаки'];
+const categoryNames = ['Гель-лаки', 'Базы', 'Топы', 'Наборы', 'Блестящие', 'Лаки'];
 const sortItems = [
 	{name: 'популярности', type: 'popular', order: 'desc'}, 
 	{name: 'цене', type: 'price', order: 'desc'}, 
